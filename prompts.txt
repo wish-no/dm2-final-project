@@ -1,0 +1,41 @@
+AI PROMPTS USED DURING PROJECT DEVELOPMENT
+(Required by the project instructions. Tool used: Claude (Anthropic).)
+
+These are the main prompts/requests used while developing the project.
+
+--- Project planning ---
+"Here are my final project instructions. Help me build a pipeline on Databricks
+(Medallion architecture) that combines two data sources of different types and
+produces a dashboard for two business objectives. Follow all instructions strictly.
+I'm new to Databricks, so the guidance must be precise and correct."
+
+"I'm using Databricks Free Edition. The dataset should be small (a few thousand rows
+is fine). The professor wants it simple yet effective, well-structured and
+understandable — not overdone. Adjust the plan accordingly."
+
+--- Data ---
+"Help me choose two real, citeable sources of different types and how to combine them."
+"My retail download won't open in Excel (too large / .crdownload). What do I do?"
+"Give me a script to slice the large retail file into a small load file and a test file."
+"Make the sample representative across the whole dataset (many months and countries)."
+
+--- Pipeline (Bronze / Silver / Gold) ---
+"Write the Bronze notebook: ingest the retail file via Auto Loader (Stream) and the
+country file via batch read (Object). Handle the 'Customer ID' column name for Delta."
+"Write the Silver notebook: clean the data, compute revenue, curate country names,
+and join the country reference to add a region column."
+"Write the Gold notebook: one table for revenue by region over time, one for top products."
+
+--- Dashboard ---
+"Walk me through building an AI/BI dashboard with the two objectives, a total-revenue
+KPI, currency formatting, and clean axis labels."
+
+--- Orchestration & test ---
+"Help me create a Job that chains bronze -> silver -> gold with a daily schedule."
+"Walk me through the live test: drop the test file, run the job, and confirm the
+dashboard changes."
+
+--- Git ---
+"Walk me through pushing the notebooks to a GitHub repo from Databricks."
+
+(Add any further prompts you used below.)
