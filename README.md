@@ -2,7 +2,7 @@
 
 **Course:** Data Curation and Data Management (Esam Sharaf, SRH University Campus Hamburg, Summer 2026)
 **Platform:** Databricks Free Edition · Medallion architecture (Bronze → Silver → Gold)
-**Author:** Vishnu Nair
+**Author:** Vishnu Prem Nair
 
 ---
 
