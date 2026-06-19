@@ -37,5 +37,3 @@ dashboard changes."
 
 --- Git ---
 "Walk me through pushing the notebooks to a GitHub repo from Databricks."
-
-(Add any further prompts you used below.)
