@@ -8,12 +8,14 @@
 
 ## 1. Objective
 
-Combine **two data sources of different types** and report **two business objectives** on a single dashboard, **built as a production-style pipeline on Databricks**.
+Combine **two data sources of different types** and report **two business objectives** on a single dashboard, built as a production-style pipeline on Databricks.
 
 | Source | Type | What it is |
 |--------|------|-----------|
 | Online Retail II transactions | **Stream** (Auto Loader) | Real UK online-retailer transactions, ingested incrementally |
 | Country → continent mapping | **Object** (file) | Static reference CSV, used to add a `region` column |
+
+In pipeline terms, the retail transactions are the **dynamic** source — incrementally ingested via Auto Loader and the one the test adds new data to — while the country mapping is the **static** reference lookup. This is the classic **fact + dimension** pattern.
 
 **Business objectives (reported on the dashboard):**
 1. **Revenue by region over time** — uses the join between both sources.
